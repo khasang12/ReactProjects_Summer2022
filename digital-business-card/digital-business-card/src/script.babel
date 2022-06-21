@@ -1,0 +1,51 @@
+function Info(){
+  return(
+    <div className="info">
+      <img src="https://images.theconversation.com/files/247814/original/file-20181128-32230-mojlgr.jpg?ixlib=rb-1.1.0&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" className="img"/>
+      <div></div>
+      <h1>Kha Sang</h1>
+      <h3>Frontend Developer</h3>
+      <h4>Student from HCMUT</h4>
+      <div className="buttonArea">
+       <button type="submit"><i class="fa-solid fa-square-envelope"></i> Email</button>
+       <button type="submit"><i class="fa-brands fa-facebook-square"></i> Facebook</button>
+      </div>
+    </div>
+  )
+}
+
+function Desc(){
+  return(
+    <div className="desc">
+      <h3>About</h3>
+      <p className="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      <br/>
+      <h3>Interests</h3>
+      <p className="para">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    </div>
+    
+  )
+}
+
+function Footer(){
+  return(
+    <div className="footer">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-instagram-square"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+  )
+}
+
+function Page(){
+  return(
+    <div className="page">
+      <Info/>
+      <Desc/>
+      <Footer/>
+    </div>
+  )
+}
+
+ReactDOM.render(Page(),document.getElementById("root"))
