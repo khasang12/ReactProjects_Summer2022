@@ -12,7 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",msgRoutes)
-app.use(express.static(path.join(__dirname,"../public/build")))
 
 app.get("*", function (_, res) {
     res.sendFile(
