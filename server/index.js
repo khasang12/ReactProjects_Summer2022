@@ -12,6 +12,18 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",msgRoutes)
+app.use(express.static(path.join(__dirname,"../public/build")))
+
+app.get("*", function (_, res) {
+    res.sendFile(
+      path.join(__dirname, "../public/build/index.html"),
+      function (err) {
+        if (err) {
+          res.status(500).send(err);
+        }
+      }
+    );
+  });
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
